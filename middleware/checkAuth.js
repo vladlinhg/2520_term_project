@@ -3,6 +3,7 @@ module.exports = {
     if (req.isAuthenticated()) {
       return next();
     }
+    console.log("Incorrect email address or password.")
     res.redirect("/auth/login");
   },
   forwardAuthenticated: function (req, res, next) {
